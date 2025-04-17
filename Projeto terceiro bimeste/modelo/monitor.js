@@ -6,6 +6,7 @@ class Monitor extends Aluno {
         this.disciplina = disciplinaMonitoria;
         this.plantoes = [];
     }
+    
 }
 
 module.exports = Monitor;

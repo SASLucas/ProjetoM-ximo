@@ -2,21 +2,15 @@ class Aluno {
     constructor(id, nome) {
         this.id = id;
         this.nome = nome;
-        this.disciplinasCadastradas = []
     }
-
-    cadastrarDisciplina(disciplina) {
+    cadastrarDuvida(duvida) {
         if(disciplina != null){
-            this.disciplinasCadastradas.push(disciplina);
+            //colocar no banco;
         }
         else{
             throw new Error("Você deve digitar a nova disciplina!")
         }
     }
-
-    enviarDuvida(duvida){
-        
-}
 }
 
 
