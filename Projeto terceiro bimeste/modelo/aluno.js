@@ -1,14 +1,24 @@
 class Aluno {
-    constructor(id, nome, email, disciplinasCadastradas) {
+    constructor(id, nome) {
         this.id = id;
         this.nome = nome;
-        this.email = email;
-        this.disciplinasCadastradas = disciplinasCadastradas
+        this.disciplinasCadastradas = []
     }
 
-    enviarDuvida(duvida) {
-        console.log(`${this.nome} enviou a dúvida: ${duvida}`);
+    cadastrarDisciplina(disciplina) {
+        if(disciplina != null){
+            this.disciplinasCadastradas.push(disciplina);
+        }
+        else{
+            throw new Error("Você deve digitar a nova disciplina!")
+        }
     }
+
+    enviarDuvida(duvida){
+        
 }
+}
+
+
 
 module.exports = Aluno;
