@@ -3,7 +3,7 @@ let prompt = require('prompt-sync')();
 let Professor = require('../modelo/professor.js'); 
 let con = require('../conexao/criarConexao.js');
 
-function menu() {
+function menuProfessor() {
   let opcao = '';
 
   while (opcao !== '0') {
@@ -53,4 +53,4 @@ function menu() {
   }
 }
 
-module.exports = { menu };
+module.exports = { menuProfessor };
