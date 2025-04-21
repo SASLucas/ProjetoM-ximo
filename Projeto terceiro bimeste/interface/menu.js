@@ -1,5 +1,5 @@
 const prompt = require('prompt-sync')();
-
+let { menuProfessor } = require('./interfaceProf'); 
 console.log('Bem-vindo!');
 
 function escolha() {
@@ -30,7 +30,7 @@ function escolha() {
 function irNovaInterface(){
     const novaInterce = escolha()
     if(escolha === 1){
-        //Não sei mudar de interface
+        menuProfessor();
     }
     else if(escolha === 2){
         //Não sei mudar de interface
