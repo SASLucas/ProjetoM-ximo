@@ -1,6 +1,6 @@
-const Professor = require('./modelo/professor');
-const Admin = require('./modelo/admin');
-const Monitoria = require('./modelo/monitoria');
+const Professor = require('../modelo/professor');
+const Admin = require('../modelo/admin');
+const Monitoria = require('../modelo/monitoria');
 
 class controleMonitoria{
     constructor(){
@@ -8,10 +8,18 @@ class controleMonitoria{
     }
 
     adicionarMonitoria(disciplina){
-        this.monitorias.push(Admin.criarMonitoria(disciplina));
+            const admin = new Admin();
+            const monitoria = admin.criarMonitoria(disciplina);
+            this.monitorias.push(monitoria);
+            return monitoria;
     }
 
     adicionarMonitor(monitor){
         this.monitorias
     }
+    mostrar(){
+        console.log(this.monitorias);
+    }
 }
+
+module.exports = controleMonitoria
