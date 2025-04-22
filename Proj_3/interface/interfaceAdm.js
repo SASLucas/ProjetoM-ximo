@@ -1,18 +1,17 @@
 const prompt = require('prompt-sync')();
 const Admin = require('../modelo/admin');
-const Controller = require('../controle/controleMonitoria')
-
+const controller = require('../controle/instanciaController');
 
 function menuAdmin(voltarAoMenu) {
     let sair = false;
-    const controller = new Controller
 
     while (!sair) {
         console.log('\nMenu do admin:');
         console.log('1 - Cadastrar monitoria');
-        console.log('2 - Ver monitorias');
-        console.log('3 - Voltar ao menu principal');
-        console.log('4 - Sair');
+        console.log('2 - Cadastrar professor na monitoria');
+        console.log('3 - Ver monitorias');
+        console.log('4 - Voltar ao menu principal');
+        console.log('5 - Sair');
 
         const opcao = parseInt(prompt('Escolha uma opção: '));
 
@@ -22,13 +21,18 @@ function menuAdmin(voltarAoMenu) {
             console.log(`Monitoria de ${monitoria.disciplina} criada com sucesso!`);
         } 
         else if (opcao === 2) {
-            controller.mostrar()
+            const nome = prompt('Digite o nome do professor: ');
+            const id = prompt('Digite o id do professor: ');
+            controller.adicionarProfessor(nome, id);
         } 
         else if (opcao === 3) {
+            controller.mostrar()
+        } 
+        else if (opcao === 4) {
             voltarAoMenu();
             sair = true;
         } 
-        else if (opcao === 4) {
+        else if (opcao === 5) {
             console.log('Saindo...');
             process.exit(0);
         } 

@@ -3,15 +3,9 @@ class Aluno {
         this.id = id;
         this.nome = nome;
     }
-    cadastrarDuvida(duvida) {
-        if(disciplina != null){
-            
-        }
-        else{
-            throw new Error("Você deve digitar a nova disciplina!")
-        }
+    
     }
-}
+
 
 
 
