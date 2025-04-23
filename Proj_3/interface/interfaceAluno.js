@@ -16,15 +16,15 @@ function menuAluno(voltarAoMenu) {
         if (opcao === 1) {
           console.log(controller.verAtividade())
           console.log('atividade vizualizadascom sucesso')
-            break;
+          
         }
         else if (opcao === 2) {
             sair = true;
-            break;
+          
         }
         else if (opcao === 3) {
             voltarAoMenu()
-            break;
+          
         }
         else {
             console.log('Opção inválida!');

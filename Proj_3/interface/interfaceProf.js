@@ -21,20 +21,17 @@ function menuProf(voltarAoMenu) {
             const idMonitor = prompt('Digite o ID do monitor: ');
            controller.adicionarMonitor(idMonitor, nomeMonitor);
             console.log("Monitor cadastrado com sucesso!");
-            break;
         }
         else if (opcao === 2) {
             const nomeAluno = prompt('Digite o nome do aluno: ');
             const idAluno = prompt('Digite o ID do aluno: ');
            controller.adicionarAluno(nomeAluno,idAluno);
             console.log("Aluno cadastrado com sucesso!");
-            break;
         }
         else if (opcao === 3) {
             const atividade = prompt('Digite a atividade a ser realizada pelo aluno: ');
            controller.adicionarAtividaed(atividade);
             console.log("atividade cadastrado com sucesso!");
-            break;
         }
         else if (opcao === 4) {
             voltarAoMenu();
@@ -42,7 +39,6 @@ function menuProf(voltarAoMenu) {
         }
         else if (opcao === 5) {
             sair = true;
-            break;
         }
         else {
             console.log('Opção inválida!');

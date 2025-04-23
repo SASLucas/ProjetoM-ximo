@@ -5,8 +5,8 @@ const ControleMonitor = require('../controle/controleMonitor');
 function menuMonitor(voltarAoMenu) {
     let sair = false;
    
-    const monitor = new Monitor('monitor123', 'Monitor Exemplo');
-    const controller = new ControleMonitor(monitor);
+ const monitor = new Monitor('monitor123', 'Monitor Exemplo');
+  const controller = new ControleMonitor(monitor);
 
     while (!sair) {
         console.log('\nMenu do Monitor:');
@@ -71,7 +71,6 @@ function menuMonitor(voltarAoMenu) {
         }
         else if (opcao === 6) {
             console.log('Saindo...');
-            process.exit(0);
         }
         else {
             console.log('Opção inválida!');

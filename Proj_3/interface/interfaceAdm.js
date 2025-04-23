@@ -34,7 +34,6 @@ function menuAdmin(voltarAoMenu) {
         } 
         else if (opcao === 5) {
             console.log('Saindo...');
-            process.exit(0);
         } 
         else {
             console.log('Opção inválida!');
